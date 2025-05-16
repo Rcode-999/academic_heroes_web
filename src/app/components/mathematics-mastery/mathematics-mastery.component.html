@@ -1,0 +1,61 @@
+<div class="mathematics-page glass-bg">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1>Mathematics Mastery</h1>
+      <p>From confusion to confidence—built on <strong>conceptual understanding</strong>, not just memorization.</p>
+    </section>
+  
+    <!-- Diagnostic Approach -->
+    <section class="section">
+      <h2>Our 3-Step Method</h2>
+      <div class="method-cards">
+        <div class="glass-card">
+          <h3>🔍 Diagnostic Assessment</h3>
+          <p>We identify gaps in core concepts (even from earlier grades) with a 30-minute evaluation.</p>
+          <ul>
+            <li>Algebra readiness test</li>
+            <li>Problem-solving style analysis</li>
+          </ul>
+        </div>
+        <div class="glass-card">
+          <h3>📝 Custom Learning Plan</h3>
+          <p>A roadmap tailored to:</p>
+          <ul>
+            <li><strong>CAPS curriculum</strong> requirements</li>
+            <li><strong>Exam focus areas</strong> (e.g., Paper 1 vs. Paper 2)</li>
+            <li><strong>Student's pace</strong> (visual vs. abstract learners)</li>
+          </ul>
+        </div>
+        <div class="glass-card">
+          <h3>🚀 Active Mastery</h3>
+          <p>Concepts taught through:</p>
+          <ul>
+            <li>Real-world applications (e.g., finance, physics)</li>
+            <li>Error analysis of past papers</li>
+            <li>Interactive tools (Desmos, GeoGebra)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Grade-by-Grade Breakdown -->
+    <section class="section">
+      <h2>Grade-Specific Focus Areas</h2>
+      <div class="accordion glass-card">
+        <div *ngFor="let grade of grades" class="accordion-item">
+          <h3 (click)="toggleGrade(grade)">{{ grade.level }} ▼</h3>
+          <div *ngIf="grade.expanded" class="accordion-content">
+            <h4>{{ grade.focus }}</h4>
+            <ul>
+              <li *ngFor="let topic of grade.topics">{{ topic }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- CTA -->
+    <section class="cta-section">
+      <a [routerLink]="'/home'" fragment="contact" class="cta-button">Start Your Diagnostic</a>
+    </section>
+  </div>

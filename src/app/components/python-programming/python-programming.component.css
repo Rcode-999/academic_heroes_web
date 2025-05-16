@@ -1,0 +1,175 @@
+/* ===== Base Styles ===== */
+.python-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* ===== Hero Section ===== */
+  .python-page .hero-section {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding: 2rem 0;
+  }
+  
+  .python-page .hero-section h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-weight: 700;
+  }
+  
+  .python-page .hero-section p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .python-page .hero-section strong {
+    color: #ff5722; /* Python orange accent */
+    font-weight: 600;
+  }
+  
+  /* ===== Section Headers ===== */
+  .python-page .section {
+    margin-bottom: 3rem;
+  }
+  
+  .python-page .section h2 {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #ecf0f1;
+  }
+  
+  /* ===== Glass Cards ===== */
+  .python-page .glass-card {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .python-page .glass-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .python-page .glass-card h3 {
+    font-size: 1.3rem;
+    color: #ff5722; /* Python orange */
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .python-page .glass-card p {
+    margin-bottom: 1rem;
+    color: #555;
+  }
+  
+  .python-page .glass-card ul {
+    padding-left: 1.5rem;
+  }
+  
+  .python-page .glass-card li {
+    margin-bottom: 0.5rem;
+    color: #555;
+  }
+  
+  .python-page .glass-card li strong {
+    color: #ff5722;
+  }
+  
+  /* ===== Benefits Grid ===== */
+  .python-page .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* ===== Roadmap ===== */
+  .python-page .roadmap {
+    margin-top: 2rem;
+  }
+  
+  .python-page .roadmap-phase {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .python-page .roadmap-phase::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #ff5722, #4CAF50);
+    border-radius: 2px;
+  }
+  
+  /* ===== Data Structures Grid ===== */
+  .python-page .data-structures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+  }
+  
+  .python-page .data-structures .glass-card {
+    border-top: 4px solid #ff5722;
+  }
+  
+  /* ===== CTA Button ===== */
+  .python-page .cta-section {
+    text-align: center;
+    margin-top: 3rem;
+  }
+  
+  .python-page .cta-button {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    background-color: #ff5722; /* Python orange */
+    color: white;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(255, 87, 34, 0.3);
+  }
+  
+  .python-page .cta-button:hover {
+    background-color: #e64a19;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(255, 87, 34, 0.4);
+  }
+  
+  /* ===== Responsive Design ===== */
+  @media (max-width: 768px) {
+    .python-page .hero-section h1 {
+      font-size: 2rem;
+    }
+    
+    .python-page .benefits-grid,
+    .python-page .data-structures {
+      grid-template-columns: 1fr;
+    }
+    
+    .python-page .glass-card {
+      padding: 1.2rem;
+    }
+  }

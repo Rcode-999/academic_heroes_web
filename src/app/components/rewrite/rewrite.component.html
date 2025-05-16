@@ -1,0 +1,61 @@
+<div class="matric-rewrite-page glass-bg">
+    <!-- Hero Section -->
+    <section class="hero-section">
+      <h1>Matric Maths Rewrite Support</h1>
+      <p>From setback to comeback—rebuilding confidence through <strong>deep understanding</strong> and exam readiness.</p>
+    </section>
+  
+    <!-- Diagnostic Approach -->
+    <section class="section">
+      <h2>Our Rewrite Game Plan</h2>
+      <div class="method-cards">
+        <div class="glass-card">
+          <h3>🔍 Targeted Assessment</h3>
+          <p>We identify weak points from your last exam and foundational gaps with a focused 30-minute assessment.</p>
+          <ul>
+            <li>Past paper performance review</li>
+            <li>Conceptual understanding check</li>
+          </ul>
+        </div>
+        <div class="glass-card">
+          <h3>📊 Custom Recovery Plan</h3>
+          <p>Tailored to:</p>
+          <ul>
+            <li><strong>DBE/IEB syllabus</strong> alignment</li>
+            <li><strong>High-impact sections</strong> (e.g., Trig, Algebra, Functions)</li>
+            <li><strong>Your learning style</strong> & confidence zones</li>
+          </ul>
+        </div>
+        <div class="glass-card">
+          <h3>🚀 Focused Mastery</h3>
+          <p>We accelerate your progress using:</p>
+          <ul>
+            <li>Smart revision tools (Desmos, GeoGebra, YouTube walkthroughs)</li>
+            <li>Timed practice & feedback</li>
+            <li>Exam strategy coaching</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Focus Areas -->
+    <section class="section">
+      <h2>Key Content Areas for Matric Success</h2>
+      <div class="accordion glass-card">
+        <div *ngFor="let topic of rewriteTopics" class="accordion-item">
+          <h3 (click)="toggleTopic(topic)">{{ topic.name }} ▼</h3>
+          <div *ngIf="topic.expanded" class="accordion-content">
+            <ul>
+              <li *ngFor="let subTopic of topic.subTopics">{{ subTopic }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+    <!-- CTA -->
+    <section class="cta-section">
+      <a [routerLink]="'/home'" fragment="contact" class="cta-button">Book Your First Session</a>
+    </section>
+  </div>
+  
